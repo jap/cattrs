@@ -1,9 +1,22 @@
-from cattr import converters, disambiguators, dispatch, errors, gen, preconf
+from cattr import converters, disambiguators, dispatch, gen, preconf
 
+from . import errors
 from .converters import Converter, GenConverter, UnstructureStrategy
+from .errors import (
+    BaseValidationError,
+    ClassValidationError,
+    ForbiddenExtraKeysError,
+    IterableValidationError,
+    StructureHandlerNotFoundError,
+)
 from .gen import override
 
 __all__ = (
+    "BaseValidationError",
+    "ClassValidationError",
+    "ForbiddenExtraKeysError",
+    "IterableValidationError",
+    "StructureHandlerNotFoundError",
     "Converter",
     "converters",
     "disambiguators",
